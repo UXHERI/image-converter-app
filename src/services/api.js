@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Replace with your actual API Gateway endpoint
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'YOUR_API_GATEWAY_URL';
+const API_BASE_URL = 'https://rux7i7mjy5.execute-api.us-east-1.amazonaws.com';
 
 export const convertImage = async (imageFile, targetFormat, quality) => {
   const formData = new FormData();
