@@ -19,7 +19,11 @@ const Footer = () => (
         rel="noopener noreferrer" 
         className="social-link"
       >
-        <span className="social-icon">🐙</span>
+        <img 
+          src="https://skillicons.dev/icons?i=github" 
+          alt="GitHub" 
+          className="social-icon"
+        />
         GitHub
       </a>
       <a 
@@ -28,7 +32,11 @@ const Footer = () => (
         rel="noopener noreferrer" 
         className="social-link"
       >
-        <span className="social-icon">💼</span>
+        <img 
+          src="https://skillicons.dev/icons?i=linkedin" 
+          alt="LinkedIn" 
+          className="social-icon"
+        />
         LinkedIn
       </a>
     </div>
