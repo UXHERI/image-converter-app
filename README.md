@@ -24,3 +24,4 @@ A modern, serverless image conversion web application built with AWS serverless 
 - **CloudWatch** - Comprehensive logging and monitoring
 
 ### Infrastructure
+![Infrastructure](https://github.com/UXHERI/image-converter-app/blob/main/Infrastructure.png?raw=true)
