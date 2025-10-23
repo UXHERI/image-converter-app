@@ -6,6 +6,35 @@ import PreviewSection from './components/PreviewSection';
 import { convertImage } from './services/api';
 import './styles/App.css';
 
+// Add this component inside your App.js, before the main return statement
+const Footer = () => (
+  <footer className="footer">
+    <div className="creator">
+      Created with ❤️ by <strong>Uzair Khan</strong>
+    </div>
+    <div className="social-links">
+      <a 
+        href="https://github.com/UXHERI" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="social-link"
+      >
+        <span className="social-icon">🐙</span>
+        GitHub
+      </a>
+      <a 
+        href="https://linkedin.com/in/iam-uzairkhan" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="social-link"
+      >
+        <span className="social-icon">💼</span>
+        LinkedIn
+      </a>
+    </div>
+  </footer>
+);
+
 function App() {
   const [originalImage, setOriginalImage] = useState(null);
   const [convertedImage, setConvertedImage] = useState(null);
@@ -100,6 +129,7 @@ function App() {
             </div>
           )}
         </main>
+        <Footer />
       </div>
     </div>
   );

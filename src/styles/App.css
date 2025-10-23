@@ -32,12 +32,17 @@ body {
 .app {
   min-height: 100vh;
   padding: var(--mobile-padding);
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header - Mobile First */
@@ -45,6 +50,7 @@ body {
   text-align: center;
   margin-bottom: 2rem;
   color: white;
+  flex-shrink: 0;
 }
 
 .logo {
@@ -80,6 +86,57 @@ body {
   padding: clamp(1.25rem, 4vw, 2rem);
   box-shadow: var(--shadow);
   width: 100%;
+  flex: 1;
+}
+
+/* Footer with Branding */
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1.5rem 0;
+  color: white;
+  flex-shrink: 0;
+}
+
+.creator {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.creator strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+}
+
+.social-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.social-icon {
+  font-size: 1.1rem;
 }
 
 /* Grid Layout - Mobile First */
@@ -410,6 +467,10 @@ body {
   .upload-area {
     padding: 3rem 2rem;
   }
+  
+  .social-links {
+    gap: 2rem;
+  }
 }
 
 /* Desktop Devices (1024px and up) */
@@ -425,6 +486,10 @@ body {
   
   .main-content {
     padding: 3rem;
+  }
+  
+  .footer {
+    margin-top: 3rem;
   }
 }
 
@@ -469,6 +534,17 @@ body {
     min-height: 200px;
     padding: 0.75rem;
   }
+  
+  .social-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .social-link {
+    width: 200px;
+    justify-content: center;
+  }
 }
 
 /* Very Small Devices (360px and down) */
@@ -495,6 +571,11 @@ body {
     padding: 10px 15px;
     font-size: 0.85rem;
   }
+  
+  .social-link {
+    width: 180px;
+    padding: 0.4rem 0.8rem;
+  }
 }
 
 /* Landscape Mode for Mobile */
@@ -518,6 +599,11 @@ body {
   
   .header {
     margin-bottom: 1rem;
+  }
+  
+  .footer {
+    margin-top: 1rem;
+    padding: 1rem 0;
   }
 }
 
@@ -545,6 +631,10 @@ body {
   }
   
   .download-btn:hover {
+    transform: none;
+  }
+  
+  .social-link:hover {
     transform: none;
   }
 }
